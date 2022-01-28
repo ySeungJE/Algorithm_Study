@@ -9,7 +9,7 @@ class x_interval_n {
 	long[] solution(int x, int n) {
 		long[] array = new long[n];
 		for(int i=0; i<array.length; i++) {
-			array[i]=x*(i+1);
+			array[i]=(long)x*(long)(i+1);
 		}
 		return array;
 	}
