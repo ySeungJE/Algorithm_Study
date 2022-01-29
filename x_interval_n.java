@@ -1,16 +1,12 @@
 package Programmers;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
 class x_interval_n {
 	long[] solution(int x, int n) {
 		long[] array = new long[n];
-		for(int i=0; i<array.length; i++) {
-			array[i]=(long)x*(long)(i+1);
-		}
+		IntStream.range(1, n+1).forEach(i->array[i-1]=(long)x*(long)(i));
 		return array;
 	}
 	
