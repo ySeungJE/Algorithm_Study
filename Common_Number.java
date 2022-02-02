@@ -11,15 +11,4 @@ public class Common_Number {
 		answer[1] = (n*m)/answer[0];
 		return answer;
 	}
-	
-	public static void main(String[] args) {
-		int[] arr = new int[2];
-		Common_Number cn = new Common_Number();
-		
-		arr = cn.solution(2, 5);
-		
-		for(int i : arr) {
-			System.out.println(i);
-		}
-	}
 }

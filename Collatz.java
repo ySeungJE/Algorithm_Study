@@ -17,9 +17,4 @@ public class Collatz {
 		else
 			return count;
 	}
-	
-	public static void main(String[] args) {
-		Collatz c = new Collatz();
-		System.out.println(c.solution(626331));
-	}
 }
