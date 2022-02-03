@@ -10,10 +10,4 @@ public class Descending_Order {
         sb.append(String.valueOf(char_arr));
         return Long.parseLong(sb.reverse().toString());
 	}
-	
-	public static void main(String[] args) {
-		long l = 118372;
-		long l2 = Descending_Order.solution(l);
-		System.out.println(l2);
-	}
 }
