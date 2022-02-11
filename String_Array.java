@@ -4,28 +4,15 @@ import java.util.Arrays;
 
 public class String_Array {
 	public static String[] solution(String[] strings, int n) {
+		String[] test = new String[strings.length];
 		StringBuilder sb;
-		String test;
-		for (int i = 0; i < strings.length; i++) {
+		for(int i=0; i<test.length; i++) 
+			test[i] = ""+strings[i].charAt(n)+strings[i];
+		Arrays.sort(test);
+		for(int i=0; i<test.length; i++) {
 			sb = new StringBuilder();
-			test = strings[i].substring(0, n);
-			strings[i]=(sb.append(strings[i]).
-					delete(0, n).append(test).toString());
+			test[i] = sb.append(test[i]).deleteCharAt(0).toString();
 		}
-		Arrays.sort(strings);
-		for(int i=0; i<strings.length; i++) {
-			sb = new StringBuilder();
-			test = strings[i].substring(0, strings[i].length()-n);
-			strings[i]=(sb.append(strings[i]).
-					delete(0, strings[i].length()-n).append(test).toString());
-		}
-		return strings;
-	}
-	public static void main(String[] args) {
-		String[] strings = {"abce","bbcd","cdx"};
-		strings = String_Array.solution(strings, 2);
-		for(String s : strings) {
-			System.out.println(s);
-		}
+		return test;
 	}
 }
